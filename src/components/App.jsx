@@ -1,24 +1,20 @@
 // import { useState } from "react";
 // import { HiUser } from "react-icons/hi";
-import styled from "styled-components";
-import "./App.css";
 
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: #bf4f74;
-`;
-const Wrapper = styled.section`
-  padding: 4em;
-  background: papayawhip;
-`;
+import "./App.css";
+import { Profile } from "./Profile/Profile";
+import userData from "../userData.json";
 
 function App() {
   return (
     <>
-      <Wrapper>
-        <Title>Hello React Home Work - 1!</Title>
-      </Wrapper>
+      <Profile
+        name={userData.username}
+        tag={userData.tag}
+        location={userData.location}
+        image={userData.avatar}
+        stats={userData.stats}
+      />
     </>
   );
 }
