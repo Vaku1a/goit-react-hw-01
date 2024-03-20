@@ -1,30 +1,38 @@
-import { Avatar } from "../Avatar/Avatar.styled";
-import { ItemStat } from "../ItemStat/ItemStat.styled";
-import { ListStat } from "../ListStat/ListStat.styled";
-import { Card } from "./Profile.styled";
+import {
+  Avatar,
+  Card,
+  ItemStat,
+  NameItem,
+  ListStat,
+  SpanItem,
+  UserName,
+  Tag,
+  Location,
+  Container,
+} from "./Profile.styled";
 
 export const Profile = ({ name, tag, location, image, stats }) => {
   console.log("name", name);
   return (
     <Card>
-      <div>
+      <Container>
         <Avatar src={image} alt={name} />
-        <p>{name}</p>
-        <p>{tag}</p>
-        <p>{location}</p>
-      </div>
+        <UserName>{name}</UserName>
+        <Tag>@{tag}</Tag>
+        <Location>{location}</Location>
+      </Container>
       <ListStat>
         <ItemStat>
-          <span>Followers</span>
-          <span>{stats.followers}</span>
+          <NameItem>Followers</NameItem>
+          <SpanItem>{stats.followers}</SpanItem>
         </ItemStat>
         <ItemStat>
-          <span>Views</span>
-          <span>{stats.views}</span>
+          <NameItem>Views</NameItem>
+          <SpanItem>{stats.views}</SpanItem>
         </ItemStat>
         <ItemStat>
-          <span>Likes</span>
-          <span>{stats.likes}</span>
+          <NameItem>Likes</NameItem>
+          <SpanItem>{stats.likes}</SpanItem>
         </ItemStat>
       </ListStat>
     </Card>
