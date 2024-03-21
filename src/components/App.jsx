@@ -4,17 +4,16 @@
 import "./App.css";
 import { Profile } from "./Profile/Profile";
 import userData from "../userData.json";
+import friends from "../friends.json";
+import { FriendList } from "./Friends/FriendList/FriendList";
 
 function App() {
   return (
     <>
-      <Profile
-        name={userData.username}
-        tag={userData.tag}
-        location={userData.location}
-        image={userData.avatar}
-        stats={userData.stats}
-      />
+      <h2>Task - 1</h2>
+      <Profile {...userData} />
+      <h2>Task - 2</h2>
+      <FriendList friends={friends} />
     </>
   );
 }

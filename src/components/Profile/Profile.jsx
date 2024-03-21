@@ -11,12 +11,11 @@ import {
   Container,
 } from "./Profile.styled";
 
-export const Profile = ({ name, tag, location, image, stats }) => {
-  console.log("name", name);
+export const Profile = ({ name, tag, location, avatar, stats }) => {
   return (
     <Card>
       <Container>
-        <Avatar src={image} alt={name} />
+        <Avatar src={avatar} alt={name} />
         <UserName>{name}</UserName>
         <Tag>@{tag}</Tag>
         <Location>{location}</Location>
