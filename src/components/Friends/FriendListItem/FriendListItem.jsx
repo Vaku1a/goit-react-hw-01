@@ -6,7 +6,6 @@ import {
 } from "./FriendListItem-styled";
 
 export const FriendListItem = ({ avatar, name, isOnline, id }) => {
-  console.log("isOnline", isOnline);
   return (
     <FriendItem key={id}>
       <FriendAvatar src={avatar} alt={name} width="48" />
