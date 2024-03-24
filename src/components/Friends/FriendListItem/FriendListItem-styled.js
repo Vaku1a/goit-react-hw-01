@@ -4,8 +4,9 @@ export const FriendItem = styled.li`
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  outline: 2px solid black;
-  border-radius: 2%;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5%;
   padding: 10px;
 `;
 
@@ -24,4 +25,5 @@ export const FriendName = styled.p`
 
 export const FriendStatus = styled.p`
   color: ${({ $status }) => ($status ? "green" : "red")};
+  padding: 8px;
 `;

@@ -13,11 +13,11 @@ import { TransactionHistory } from "./Transactions/TransactionHistory/Transactio
 function App() {
   return (
     <>
-      <h2>Task - 1</h2>
+      <h2>Завдання 1 - Профіль соціальної мережі</h2>
       <Profile {...userData} />
-      <h2>Task - 2</h2>
+      <h2>Завдання 2 - Список друзів</h2>
       <FriendList friends={friends} />
-      <h2>Task - 3</h2>
+      <h2>Завдання 3 - Історія транзакцій</h2>
       <TransactionHistory items={transactions} />
     </>
   );
